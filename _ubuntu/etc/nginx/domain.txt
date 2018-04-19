@@ -1,0 +1,5 @@
+| ## | Domain                          | Port | Description           |
+|----|---------------------------------|------|-----------------------|
+| 01 | jenkins.ltv.vn          | 8080 | Jenkins CI-CD         |
+| 02 | mkdocs.ltv.vn           | 8000 | MkDocs                |
+| 03 | devops.ltv.vn           | 5000 | DevOps                |
