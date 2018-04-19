@@ -5,7 +5,7 @@
 
 export DEVOPS_HOME=/root/devops
 export CATALINA_HOME=$DEVOPS_HOME/tomcat
-export BASE_INSTALL=/root/devops/devops
+export BASE_INSTALL=/root/devops
 export TMP_INSTALL=/tmp/devops-install
 export NGINX_CONF=$BASE_INSTALL/_ubuntu/etc/nginx
 export LOCALESUPPORT=en_US.utf8
