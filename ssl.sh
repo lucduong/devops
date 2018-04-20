@@ -17,7 +17,7 @@ local_domain=$1
 #local_port=$2
 echo "SSL for domain : $local_domain is being created...."
 if [ ! -f "/etc/letsencrypt/live/$local_domain/fullchain.pem" ]; then
-  sudo certbot certonly --authenticator standalone --installer nginx -d $local_domain --pre-hook "systemctl stop nginx" --post-hook "systemctl start nginx"
+  sudo certbot certonly --authenticator standalone --installer nginx -d $local_domain,www.$local_domain --expand --pre-hook "systemctl stop nginx" --post-hook "systemctl start nginx"
 fi
 
 if [ -f "/etc/letsencrypt/live/$local_domain/fullchain.pem" ]; then
