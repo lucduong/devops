@@ -111,7 +111,7 @@ grep -q "swapfile" /etc/fstab
 # if not then create it
 if [ $? -ne 0 ]; then
   echo "swapfile not found. Adding swapfile. Swap should be double the amount of 8GB RAM"
-  sudo fallocate -l ${swapsize}M /swapfile
+  sudo fallocate -l ${swapsize} /swapfile
   sudo chmod 600 /swapfile
   sudo mkswap /swapfile
   sudo swapon /swapfile
