@@ -96,6 +96,13 @@ if [ "`which aws`" = "" ]; then
   sudo apt-get $APTVERBOSITY install awscli;
 fi
 
+if [ "`which htop`" = "" ]; then
+  echoblue "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+  echo "You need to install htop."
+  echoblue "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+  sudo apt-get $APTVERBOSITY install htop;
+fi
+
 ##
 # Swap File
 ##
