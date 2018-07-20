@@ -176,6 +176,24 @@ if [ "$installnodejs" = "y" ]; then
 fi
 
 ##
+# yarn
+##
+echo
+echoblue "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echo "Begin setting up a yarn..."
+echoblue "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echoblue "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+read -e -p "Install yarn${ques} [y/n] " -i "$DEFAULTYESNO" installyarn
+if [ "$installyarn" = "y" ]; then
+  echoblue "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+  echo "Installing & Configuring yarn"
+  echoblue "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - &&
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list &&
+  sudo apt-get update && sudo apt-get $APTVERBOSITY install yarn
+fi
+
+##
 # PM2
 ##
 echo
